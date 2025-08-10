@@ -6,7 +6,7 @@
 
 import {legacyPlugin} from '@web/dev-server-legacy';
 
-const mode = process.env.MODE || 'dev';
+const mode = 'dev';
 if (!['dev', 'prod'].includes(mode)) {
   throw new Error(`MODE must be "dev" or "prod", was "${mode}"`);
 }
@@ -14,6 +14,8 @@ if (!['dev', 'prod'].includes(mode)) {
 export default {
   nodeResolve: {exportConditions: mode === 'dev' ? ['development'] : []},
   preserveSymlinks: true,
+  appIndex: 'index.html',
+  historyApiFallback: true,
   plugins: [
     legacyPlugin({
       polyfills: {

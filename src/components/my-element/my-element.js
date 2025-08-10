@@ -4,7 +4,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {LitElement, html, css} from 'lit';
+import {LitElement, html} from 'lit';
+import {myElementStyles} from './style.js';
 
 /**
  * An example element.
@@ -14,32 +15,12 @@ import {LitElement, html, css} from 'lit';
  * @csspart button - The button
  */
 export class MyElement extends LitElement {
-  static get styles() {
-    return css`
-      :host {
-        display: block;
-        border: solid 1px gray;
-        padding: 16px;
-        max-width: 800px;
-      }
-    `;
-  }
+  static styles = myElementStyles;
 
-  static get properties() {
-    return {
-      /**
-       * The name to say "Hello" to.
-       * @type {string}
-       */
-      name: {type: String},
-
-      /**
-       * The number of times the button has been clicked.
-       * @type {number}
-       */
-      count: {type: Number},
-    };
-  }
+  static properties = {
+    name: {type: String},
+    count: {type: Number},
+  };
 
   constructor() {
     super();
@@ -64,8 +45,7 @@ export class MyElement extends LitElement {
 
   /**
    * Formats a greeting
-   * @param name {string} The name to say "Hello" to
-   * @returns {string} A greeting directed at `name`
+   * @param name The name to say "Hello" to
    */
   sayHello(name) {
     return `Hello, ${name}`;

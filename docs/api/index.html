@@ -43,11 +43,11 @@
       </tr>
       
         <tr>
-          <td>name</td><td>The name to say "Hello" to.</td><td>string</td><td></td>
+          <td>name</td><td>The name to say "Hello" to.</td><td>string</td><td>'World'</td>
         </tr>
       
         <tr>
-          <td>count</td><td>The number of times the button has been clicked.</td><td>number</td><td></td>
+          <td>count</td><td>The number of times the button has been clicked.</td><td>number</td><td>0</td>
         </tr>
       
     </table>
@@ -133,6 +133,2052 @@
       
     </table>
   
+        
+        
+        <h2>&lt;employee-app></h2>
+        <div>
+          Main employee application component.
+        </div>
+        
+    <h3>Attributes</h3>
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th><th>Type</th><th>Default</th>
+      </tr>
+      
+        <tr>
+          <td>currentLocale</td><td></td><td>string</td><td></td>
+        </tr>
+      
+    </table>
+  
+        
+    <h3>Properties</h3>
+    <table>
+      <tr>
+        <th>Name</th><th>Attribute</th><th>Description</th><th>Type</th><th>Default</th>
+      </tr>
+      
+        <tr>
+          <td>_handleLocaleChange</td><td></td><td></td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>router</td><td></td><td></td><td></td><td>new Router(this, [
+    {
+      path: ROUTES.HOME,
+      render: () => {
+        return html`
+          <main-page pageTitle=${msg('Employee List')}>
+            <employees-page slot="content"></employees-page>
+          </main-page>
+        `;
+      },
+    },
+    {
+      path: ROUTES.EDIT,
+      render: (params) => {
+        return html`
+          <main-page pageTitle=${msg('Edit Employee')}>
+            <employee-edit-page
+              slot="content"
+              employeeId=${params.id}
+            ></employee-edit-page>
+          </main-page>
+        `;
+      },
+    },
+    {
+      path: ROUTES.ADD,
+      render: () => {
+        return html`
+          <main-page pageTitle=${msg('Add Employee')}>
+            <employee-add-page slot="content"></employee-add-page>
+          </main-page>
+        `;
+      },
+    },
+  ])</td>
+        </tr>
+      
+        <tr>
+          <td>currentLocale</td><td>currentLocale</td><td></td><td>string</td><td></td>
+        </tr>
+      
+    </table>
+    
+        
+            
+          
+        
+        
+        
+        <h2>&lt;button-element></h2>
+        <div>
+          
+        </div>
+        
+    <h3>Attributes</h3>
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th><th>Type</th><th>Default</th>
+      </tr>
+      
+        <tr>
+          <td>label</td><td></td><td>string</td><td>''</td>
+        </tr>
+      
+        <tr>
+          <td>variant</td><td></td><td>string</td><td>'primary'</td>
+        </tr>
+      
+        <tr>
+          <td>size</td><td></td><td>string</td><td>'medium'</td>
+        </tr>
+      
+        <tr>
+          <td>fullWidth</td><td></td><td>boolean</td><td>false</td>
+        </tr>
+      
+        <tr>
+          <td>disabled</td><td></td><td>boolean</td><td>false</td>
+        </tr>
+      
+    </table>
+  
+        
+    <h3>Properties</h3>
+    <table>
+      <tr>
+        <th>Name</th><th>Attribute</th><th>Description</th><th>Type</th><th>Default</th>
+      </tr>
+      
+        <tr>
+          <td>label</td><td>label</td><td></td><td>string</td><td>''</td>
+        </tr>
+      
+        <tr>
+          <td>variant</td><td>variant</td><td></td><td>string</td><td>'primary'</td>
+        </tr>
+      
+        <tr>
+          <td>size</td><td>size</td><td></td><td>string</td><td>'medium'</td>
+        </tr>
+      
+        <tr>
+          <td>fullWidth</td><td>fullWidth</td><td></td><td>boolean</td><td>false</td>
+        </tr>
+      
+        <tr>
+          <td>disabled</td><td>disabled</td><td></td><td>boolean</td><td>false</td>
+        </tr>
+      
+    </table>
+    
+        
+            
+          
+        
+        
+        
+        <h2>&lt;employee-card></h2>
+        <div>
+          
+        </div>
+        
+    <h3>Attributes</h3>
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th><th>Type</th><th>Default</th>
+      </tr>
+      
+        <tr>
+          <td>employee</td><td></td><td>null</td><td>null</td>
+        </tr>
+      
+    </table>
+  
+        
+    <h3>Properties</h3>
+    <table>
+      <tr>
+        <th>Name</th><th>Attribute</th><th>Description</th><th>Type</th><th>Default</th>
+      </tr>
+      
+        <tr>
+          <td>_handleLocaleChange</td><td></td><td></td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>employee</td><td>employee</td><td></td><td>null</td><td>null</td>
+        </tr>
+      
+    </table>
+    
+        
+    <h3>Methods</h3>
+    <table>
+      <tr>
+        <th>Name</th><th>Parameters</th><th>Description</th><th>Return</th>
+      </tr>
+      
+        <tr>
+          <td>editEmployee</td><td>
+    
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th><th>Type</th>
+      </tr>
+      
+        <tr>
+          <td>id</td><td></td><td></td>
+        </tr>
+      
+    </table>
+  </td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>deleteEmployee</td><td>
+    
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th><th>Type</th>
+      </tr>
+      
+        <tr>
+          <td>id</td><td></td><td></td>
+        </tr>
+      
+    </table>
+  </td><td></td><td></td>
+        </tr>
+      
+    </table>
+  
+        
+    <h3>Events</h3>
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th>
+      </tr>
+      
+        <tr>
+          <td></td><td></td>
+        </tr>
+      
+    </table>
+      
+          
+        
+        
+        
+        <h2>&lt;employee-form></h2>
+        <div>
+          
+        </div>
+        
+    <h3>Attributes</h3>
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th><th>Type</th><th>Default</th>
+      </tr>
+      
+        <tr>
+          <td>mode</td><td></td><td>string</td><td></td>
+        </tr>
+      
+        <tr>
+          <td>formData</td><td></td><td>object</td><td></td>
+        </tr>
+      
+        <tr>
+          <td>errors</td><td></td><td>object</td><td>{}</td>
+        </tr>
+      
+        <tr>
+          <td>isSubmitting</td><td></td><td>boolean</td><td>false</td>
+        </tr>
+      
+        <tr>
+          <td>popupConfig</td><td></td><td>object</td><td>{
+      open: false,
+      type: 'info',
+      title: '',
+      message: '',
+      autoClose: 0,
+    }</td>
+        </tr>
+      
+        <tr>
+          <td>isLoading</td><td></td><td>boolean</td><td>false</td>
+        </tr>
+      
+        <tr>
+          <td>pageTitle</td><td></td><td>string</td><td>''</td>
+        </tr>
+      
+        <tr>
+          <td>submitButtonText</td><td></td><td>string</td><td></td>
+        </tr>
+      
+        <tr>
+          <td>submitButtonLoadingText</td><td></td><td>string</td><td></td>
+        </tr>
+      
+    </table>
+  
+        
+    <h3>Properties</h3>
+    <table>
+      <tr>
+        <th>Name</th><th>Attribute</th><th>Description</th><th>Type</th><th>Default</th>
+      </tr>
+      
+        <tr>
+          <td>departments</td><td></td><td></td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>positions</td><td></td><td></td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>mode</td><td>mode</td><td></td><td>string</td><td></td>
+        </tr>
+      
+        <tr>
+          <td>formData</td><td>formData</td><td></td><td>object</td><td></td>
+        </tr>
+      
+        <tr>
+          <td>errors</td><td>errors</td><td></td><td>object</td><td>{}</td>
+        </tr>
+      
+        <tr>
+          <td>isSubmitting</td><td>isSubmitting</td><td></td><td>boolean</td><td>false</td>
+        </tr>
+      
+        <tr>
+          <td>popupConfig</td><td>popupConfig</td><td></td><td>object</td><td>{
+      open: false,
+      type: 'info',
+      title: '',
+      message: '',
+      autoClose: 0,
+    }</td>
+        </tr>
+      
+        <tr>
+          <td>isLoading</td><td>isLoading</td><td></td><td>boolean</td><td>false</td>
+        </tr>
+      
+        <tr>
+          <td>pageTitle</td><td>pageTitle</td><td></td><td>string</td><td>''</td>
+        </tr>
+      
+        <tr>
+          <td>submitButtonText</td><td>submitButtonText</td><td></td><td>string</td><td></td>
+        </tr>
+      
+        <tr>
+          <td>submitButtonLoadingText</td><td>submitButtonLoadingText</td><td></td><td>string</td><td></td>
+        </tr>
+      
+    </table>
+    
+        
+    <h3>Methods</h3>
+    <table>
+      <tr>
+        <th>Name</th><th>Parameters</th><th>Description</th><th>Return</th>
+      </tr>
+      
+        <tr>
+          <td>handleInputChange</td><td>
+    
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th><th>Type</th>
+      </tr>
+      
+        <tr>
+          <td>event</td><td></td><td></td>
+        </tr>
+      
+    </table>
+  </td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>handleSubmit</td><td>
+    
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th><th>Type</th>
+      </tr>
+      
+        <tr>
+          <td>event</td><td></td><td></td>
+        </tr>
+      
+    </table>
+  </td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>showPopup</td><td>
+    
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th><th>Type</th>
+      </tr>
+      
+        <tr>
+          <td>type</td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>title</td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>message</td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>autoClose</td><td></td><td></td>
+        </tr>
+      
+    </table>
+  </td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>handlePopupClose</td><td></td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>handleCancel</td><td></td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>handleCancelConfirm</td><td></td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>setFormData</td><td>
+    
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th><th>Type</th>
+      </tr>
+      
+        <tr>
+          <td>data</td><td></td><td></td>
+        </tr>
+      
+    </table>
+  </td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>setErrors</td><td>
+    
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th><th>Type</th>
+      </tr>
+      
+        <tr>
+          <td>errors</td><td></td><td></td>
+        </tr>
+      
+    </table>
+  </td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>setSubmitting</td><td>
+    
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th><th>Type</th>
+      </tr>
+      
+        <tr>
+          <td>submitting</td><td></td><td></td>
+        </tr>
+      
+    </table>
+  </td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>setLoading</td><td>
+    
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th><th>Type</th>
+      </tr>
+      
+        <tr>
+          <td>loading</td><td></td><td></td>
+        </tr>
+      
+    </table>
+  </td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>resetForm</td><td></td><td></td><td></td>
+        </tr>
+      
+    </table>
+  
+            
+          
+        
+        
+        
+        <h2>&lt;employee-list></h2>
+        <div>
+          
+        </div>
+        
+    <h3>Attributes</h3>
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th><th>Type</th><th>Default</th>
+      </tr>
+      
+        <tr>
+          <td>employees</td><td></td><td>array</td><td>[]</td>
+        </tr>
+      
+        <tr>
+          <td>loading</td><td></td><td>boolean</td><td>false</td>
+        </tr>
+      
+        <tr>
+          <td>error</td><td></td><td>null</td><td>null</td>
+        </tr>
+      
+        <tr>
+          <td>currentPage</td><td></td><td>number</td><td>1</td>
+        </tr>
+      
+        <tr>
+          <td>totalPages</td><td></td><td>number</td><td>0</td>
+        </tr>
+      
+        <tr>
+          <td>totalItems</td><td></td><td>number</td><td>0</td>
+        </tr>
+      
+        <tr>
+          <td>itemsPerPage</td><td></td><td>number</td><td>10</td>
+        </tr>
+      
+        <tr>
+          <td>searchQuery</td><td></td><td>string</td><td></td>
+        </tr>
+      
+        <tr>
+          <td>showDeletePopup</td><td></td><td>boolean</td><td>false</td>
+        </tr>
+      
+        <tr>
+          <td>employeeToDelete</td><td></td><td>null</td><td>null</td>
+        </tr>
+      
+        <tr>
+          <td>selectedEmployees</td><td></td><td>object</td><td>new Set()</td>
+        </tr>
+      
+        <tr>
+          <td>showMultiDeletePopup</td><td></td><td>boolean</td><td>false</td>
+        </tr>
+      
+        <tr>
+          <td>showEditErrorPopup</td><td></td><td>boolean</td><td>false</td>
+        </tr>
+      
+        <tr>
+          <td>selectAllChecked</td><td></td><td>boolean</td><td>false</td>
+        </tr>
+      
+        <tr>
+          <td>isSearching</td><td></td><td>boolean</td><td>false</td>
+        </tr>
+      
+        <tr>
+          <td>currentLocale</td><td></td><td>boolean</td><td></td>
+        </tr>
+      
+    </table>
+  
+        
+    <h3>Properties</h3>
+    <table>
+      <tr>
+        <th>Name</th><th>Attribute</th><th>Description</th><th>Type</th><th>Default</th>
+      </tr>
+      
+        <tr>
+          <td>searchQuery</td><td>searchQuery</td><td></td><td>string</td><td></td>
+        </tr>
+      
+        <tr>
+          <td>_handleLocaleChange</td><td></td><td></td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>employees</td><td>employees</td><td></td><td>array</td><td>[]</td>
+        </tr>
+      
+        <tr>
+          <td>loading</td><td>loading</td><td></td><td>boolean</td><td>false</td>
+        </tr>
+      
+        <tr>
+          <td>error</td><td>error</td><td></td><td>null</td><td>null</td>
+        </tr>
+      
+        <tr>
+          <td>currentPage</td><td>currentPage</td><td></td><td>number</td><td>1</td>
+        </tr>
+      
+        <tr>
+          <td>totalPages</td><td>totalPages</td><td></td><td>number</td><td>0</td>
+        </tr>
+      
+        <tr>
+          <td>totalItems</td><td>totalItems</td><td></td><td>number</td><td>0</td>
+        </tr>
+      
+        <tr>
+          <td>itemsPerPage</td><td>itemsPerPage</td><td></td><td>number</td><td>10</td>
+        </tr>
+      
+        <tr>
+          <td>_searchQuery</td><td></td><td></td><td>string</td><td>''</td>
+        </tr>
+      
+        <tr>
+          <td>showDeletePopup</td><td>showDeletePopup</td><td></td><td>boolean</td><td>false</td>
+        </tr>
+      
+        <tr>
+          <td>employeeToDelete</td><td>employeeToDelete</td><td></td><td>null</td><td>null</td>
+        </tr>
+      
+        <tr>
+          <td>selectedEmployees</td><td>selectedEmployees</td><td></td><td>object</td><td>new Set()</td>
+        </tr>
+      
+        <tr>
+          <td>showMultiDeletePopup</td><td>showMultiDeletePopup</td><td></td><td>boolean</td><td>false</td>
+        </tr>
+      
+        <tr>
+          <td>showEditErrorPopup</td><td>showEditErrorPopup</td><td></td><td>boolean</td><td>false</td>
+        </tr>
+      
+        <tr>
+          <td>selectAllChecked</td><td>selectAllChecked</td><td></td><td>boolean</td><td>false</td>
+        </tr>
+      
+        <tr>
+          <td>isSearching</td><td>isSearching</td><td></td><td>boolean</td><td>false</td>
+        </tr>
+      
+        <tr>
+          <td>unsubscribe</td><td></td><td></td><td>null</td><td>null</td>
+        </tr>
+      
+        <tr>
+          <td>currentLocale</td><td>currentLocale</td><td></td><td>boolean</td><td></td>
+        </tr>
+      
+    </table>
+    
+        
+    <h3>Methods</h3>
+    <table>
+      <tr>
+        <th>Name</th><th>Parameters</th><th>Description</th><th>Return</th>
+      </tr>
+      
+        <tr>
+          <td>setupStoreSubscription</td><td></td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>loadEmployees</td><td></td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>changePage</td><td>
+    
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th><th>Type</th>
+      </tr>
+      
+        <tr>
+          <td>page</td><td></td><td></td>
+        </tr>
+      
+    </table>
+  </td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>showDeleteConfirmation</td><td>
+    
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th><th>Type</th>
+      </tr>
+      
+        <tr>
+          <td>employee</td><td></td><td></td>
+        </tr>
+      
+    </table>
+  </td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>deleteEmployee</td><td>
+    
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th><th>Type</th>
+      </tr>
+      
+        <tr>
+          <td>id</td><td></td><td></td>
+        </tr>
+      
+    </table>
+  </td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>handleDeleteConfirm</td><td></td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>handleDeleteCancel</td><td></td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>handleSelectAll</td><td></td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>handleEmployeeSelect</td><td>
+    
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th><th>Type</th>
+      </tr>
+      
+        <tr>
+          <td>employeeId</td><td></td><td></td>
+        </tr>
+      
+    </table>
+  </td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>handleMultiDelete</td><td></td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>handleMultiDeleteConfirm</td><td></td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>handleMultiDeleteCancel</td><td></td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>handleMultiEdit</td><td></td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>handleEditErrorClose</td><td></td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>handleSearchChange</td><td></td><td></td><td></td>
+        </tr>
+      
+    </table>
+  
+            
+          
+        
+        
+        
+        <h2>&lt;employee-grid></h2>
+        <div>
+          
+        </div>
+        
+    <h3>Attributes</h3>
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th><th>Type</th><th>Default</th>
+      </tr>
+      
+        <tr>
+          <td>employees</td><td></td><td>array</td><td>[]</td>
+        </tr>
+      
+        <tr>
+          <td>loading</td><td></td><td>boolean</td><td>false</td>
+        </tr>
+      
+        <tr>
+          <td>error</td><td></td><td>null</td><td>null</td>
+        </tr>
+      
+        <tr>
+          <td>currentPage</td><td></td><td>number</td><td>1</td>
+        </tr>
+      
+        <tr>
+          <td>totalPages</td><td></td><td>number</td><td>0</td>
+        </tr>
+      
+        <tr>
+          <td>totalItems</td><td></td><td>number</td><td>0</td>
+        </tr>
+      
+        <tr>
+          <td>itemsPerPage</td><td></td><td>number</td><td>10</td>
+        </tr>
+      
+        <tr>
+          <td>searchQuery</td><td></td><td>string</td><td></td>
+        </tr>
+      
+        <tr>
+          <td>showDeletePopup</td><td></td><td>boolean</td><td>false</td>
+        </tr>
+      
+        <tr>
+          <td>employeeToDelete</td><td></td><td>null</td><td>null</td>
+        </tr>
+      
+        <tr>
+          <td>isSearching</td><td></td><td>boolean</td><td>false</td>
+        </tr>
+      
+    </table>
+  
+        
+    <h3>Properties</h3>
+    <table>
+      <tr>
+        <th>Name</th><th>Attribute</th><th>Description</th><th>Type</th><th>Default</th>
+      </tr>
+      
+        <tr>
+          <td>searchQuery</td><td>searchQuery</td><td></td><td>string</td><td></td>
+        </tr>
+      
+        <tr>
+          <td>_handleLocaleChange</td><td></td><td></td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>employees</td><td>employees</td><td></td><td>array</td><td>[]</td>
+        </tr>
+      
+        <tr>
+          <td>loading</td><td>loading</td><td></td><td>boolean</td><td>false</td>
+        </tr>
+      
+        <tr>
+          <td>error</td><td>error</td><td></td><td>null</td><td>null</td>
+        </tr>
+      
+        <tr>
+          <td>currentPage</td><td>currentPage</td><td></td><td>number</td><td>1</td>
+        </tr>
+      
+        <tr>
+          <td>totalPages</td><td>totalPages</td><td></td><td>number</td><td>0</td>
+        </tr>
+      
+        <tr>
+          <td>totalItems</td><td>totalItems</td><td></td><td>number</td><td>0</td>
+        </tr>
+      
+        <tr>
+          <td>itemsPerPage</td><td>itemsPerPage</td><td></td><td>number</td><td>10</td>
+        </tr>
+      
+        <tr>
+          <td>_searchQuery</td><td></td><td></td><td>string</td><td>''</td>
+        </tr>
+      
+        <tr>
+          <td>showDeletePopup</td><td>showDeletePopup</td><td></td><td>boolean</td><td>false</td>
+        </tr>
+      
+        <tr>
+          <td>employeeToDelete</td><td>employeeToDelete</td><td></td><td>null</td><td>null</td>
+        </tr>
+      
+        <tr>
+          <td>isSearching</td><td>isSearching</td><td></td><td>boolean</td><td>false</td>
+        </tr>
+      
+        <tr>
+          <td>unsubscribe</td><td></td><td></td><td>null</td><td>null</td>
+        </tr>
+      
+    </table>
+    
+        
+    <h3>Methods</h3>
+    <table>
+      <tr>
+        <th>Name</th><th>Parameters</th><th>Description</th><th>Return</th>
+      </tr>
+      
+        <tr>
+          <td>setupStoreSubscription</td><td></td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>loadEmployees</td><td></td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>changePage</td><td>
+    
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th><th>Type</th>
+      </tr>
+      
+        <tr>
+          <td>page</td><td></td><td></td>
+        </tr>
+      
+    </table>
+  </td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>handleEditEmployee</td><td>
+    
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th><th>Type</th>
+      </tr>
+      
+        <tr>
+          <td>event</td><td></td><td></td>
+        </tr>
+      
+    </table>
+  </td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>handleDeleteEmployee</td><td>
+    
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th><th>Type</th>
+      </tr>
+      
+        <tr>
+          <td>event</td><td></td><td></td>
+        </tr>
+      
+    </table>
+  </td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>deleteEmployee</td><td>
+    
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th><th>Type</th>
+      </tr>
+      
+        <tr>
+          <td>id</td><td></td><td></td>
+        </tr>
+      
+    </table>
+  </td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>handleDeleteConfirm</td><td></td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>handleDeleteCancel</td><td></td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>handleSearchChange</td><td></td><td></td><td></td>
+        </tr>
+      
+    </table>
+  
+            
+          
+        
+        
+        
+        <h2>&lt;header-element></h2>
+        <div>
+          
+        </div>
+        
+    <h3>Attributes</h3>
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th><th>Type</th><th>Default</th>
+      </tr>
+      
+        <tr>
+          <td>currentLocale</td><td></td><td>string</td><td></td>
+        </tr>
+      
+    </table>
+  
+        
+    <h3>Properties</h3>
+    <table>
+      <tr>
+        <th>Name</th><th>Attribute</th><th>Description</th><th>Type</th><th>Default</th>
+      </tr>
+      
+        <tr>
+          <td>_handleLocaleChange</td><td></td><td></td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>currentLocale</td><td>currentLocale</td><td></td><td>string</td><td></td>
+        </tr>
+      
+    </table>
+    
+        
+            
+          
+        
+        
+        
+        <h2>&lt;my-element></h2>
+        <div>
+          An example element.
+        </div>
+        
+    <h3>Attributes</h3>
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th><th>Type</th><th>Default</th>
+      </tr>
+      
+        <tr>
+          <td>name</td><td></td><td>string</td><td>'World'</td>
+        </tr>
+      
+        <tr>
+          <td>count</td><td></td><td>number</td><td>0</td>
+        </tr>
+      
+    </table>
+  
+        
+    <h3>Properties</h3>
+    <table>
+      <tr>
+        <th>Name</th><th>Attribute</th><th>Description</th><th>Type</th><th>Default</th>
+      </tr>
+      
+        <tr>
+          <td>name</td><td>name</td><td></td><td>string</td><td>'World'</td>
+        </tr>
+      
+        <tr>
+          <td>count</td><td>count</td><td></td><td>number</td><td>0</td>
+        </tr>
+      
+    </table>
+    
+        
+    <h3>Methods</h3>
+    <table>
+      <tr>
+        <th>Name</th><th>Parameters</th><th>Description</th><th>Return</th>
+      </tr>
+      
+        <tr>
+          <td>sayHello</td><td>
+    
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th><th>Type</th>
+      </tr>
+      
+        <tr>
+          <td>name</td><td>The name to say "Hello" to</td><td></td>
+        </tr>
+      
+    </table>
+  </td><td>Formats a greeting</td><td></td>
+        </tr>
+      
+    </table>
+  
+        
+    <h3>Events</h3>
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th>
+      </tr>
+      
+        <tr>
+          <td>count-changed</td><td>Indicates when the count changes</td>
+        </tr>
+      
+    </table>
+      
+        
+    <h3>Slots</h3>
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th>
+      </tr>
+      
+        <tr>
+          <td>(default)</td><td>This element has a slot</td>
+        </tr>
+      
+    </table>
+    
+        
+    <h3>CSS Shadow Parts</h3>
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th>
+      </tr>
+      
+        <tr>
+          <td>button</td><td>The button</td>
+        </tr>
+      
+    </table>
+  
+        
+        
+        <h2>&lt;input-element></h2>
+        <div>
+          An example element.
+        </div>
+        
+    <h3>Attributes</h3>
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th><th>Type</th><th>Default</th>
+      </tr>
+      
+        <tr>
+          <td>label</td><td></td><td>string</td><td>''</td>
+        </tr>
+      
+        <tr>
+          <td>error</td><td></td><td>string</td><td>''</td>
+        </tr>
+      
+        <tr>
+          <td>icon</td><td></td><td>string</td><td>''</td>
+        </tr>
+      
+        <tr>
+          <td>value</td><td></td><td>string</td><td>''</td>
+        </tr>
+      
+        <tr>
+          <td>type</td><td></td><td>string</td><td>'text'</td>
+        </tr>
+      
+        <tr>
+          <td>placeholder</td><td></td><td>string</td><td>''</td>
+        </tr>
+      
+        <tr>
+          <td>name</td><td></td><td>string</td><td>''</td>
+        </tr>
+      
+        <tr>
+          <td>options</td><td></td><td>array</td><td>[]</td>
+        </tr>
+      
+    </table>
+  
+        
+    <h3>Properties</h3>
+    <table>
+      <tr>
+        <th>Name</th><th>Attribute</th><th>Description</th><th>Type</th><th>Default</th>
+      </tr>
+      
+        <tr>
+          <td>_handleLocaleChange</td><td></td><td></td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>label</td><td>label</td><td></td><td>string</td><td>''</td>
+        </tr>
+      
+        <tr>
+          <td>error</td><td>error</td><td></td><td>string</td><td>''</td>
+        </tr>
+      
+        <tr>
+          <td>icon</td><td>icon</td><td></td><td>string</td><td>''</td>
+        </tr>
+      
+        <tr>
+          <td>value</td><td>value</td><td></td><td>string</td><td>''</td>
+        </tr>
+      
+        <tr>
+          <td>type</td><td>type</td><td></td><td>string</td><td>'text'</td>
+        </tr>
+      
+        <tr>
+          <td>placeholder</td><td>placeholder</td><td></td><td>string</td><td>''</td>
+        </tr>
+      
+        <tr>
+          <td>name</td><td>name</td><td></td><td>string</td><td>''</td>
+        </tr>
+      
+        <tr>
+          <td>options</td><td>options</td><td></td><td>array</td><td>[]</td>
+        </tr>
+      
+    </table>
+    
+        
+    <h3>Methods</h3>
+    <table>
+      <tr>
+        <th>Name</th><th>Parameters</th><th>Description</th><th>Return</th>
+      </tr>
+      
+        <tr>
+          <td>getTodayDate</td><td></td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>onChange</td><td>
+    
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th><th>Type</th>
+      </tr>
+      
+        <tr>
+          <td>event</td><td></td><td></td>
+        </tr>
+      
+    </table>
+  </td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>onInput</td><td>
+    
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th><th>Type</th>
+      </tr>
+      
+        <tr>
+          <td>event</td><td></td><td></td>
+        </tr>
+      
+    </table>
+  </td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>onFocus</td><td>
+    
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th><th>Type</th>
+      </tr>
+      
+        <tr>
+          <td>event</td><td></td><td></td>
+        </tr>
+      
+    </table>
+  </td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>onBlur</td><td>
+    
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th><th>Type</th>
+      </tr>
+      
+        <tr>
+          <td>event</td><td></td><td></td>
+        </tr>
+      
+    </table>
+  </td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>sayHello</td><td>
+    
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th><th>Type</th>
+      </tr>
+      
+        <tr>
+          <td>name</td><td>The name to say "Hello" to</td><td></td>
+        </tr>
+      
+    </table>
+  </td><td>Formats a greeting</td><td></td>
+        </tr>
+      
+    </table>
+  
+        
+    <h3>Events</h3>
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th>
+      </tr>
+      
+        <tr>
+          <td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>focus</td><td></td>
+        </tr>
+      
+        <tr>
+          <td>blur</td><td></td>
+        </tr>
+      
+        <tr>
+          <td>count-changed</td><td>Indicates when the count changes</td>
+        </tr>
+      
+    </table>
+      
+        
+    <h3>Slots</h3>
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th>
+      </tr>
+      
+        <tr>
+          <td>(default)</td><td>This element has a slot</td>
+        </tr>
+      
+    </table>
+    
+        
+    <h3>CSS Shadow Parts</h3>
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th>
+      </tr>
+      
+        <tr>
+          <td>button</td><td>The button</td>
+        </tr>
+      
+    </table>
+  
+        
+        
+        <h2>&lt;pagination-element></h2>
+        <div>
+          Pagination component for displaying page navigation.
+        </div>
+        
+    <h3>Attributes</h3>
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th><th>Type</th><th>Default</th>
+      </tr>
+      
+        <tr>
+          <td>currentPage</td><td></td><td>number</td><td>1</td>
+        </tr>
+      
+        <tr>
+          <td>totalPages</td><td></td><td>number</td><td>0</td>
+        </tr>
+      
+        <tr>
+          <td>maxVisiblePages</td><td></td><td>number</td><td>5</td>
+        </tr>
+      
+    </table>
+  
+        
+    <h3>Properties</h3>
+    <table>
+      <tr>
+        <th>Name</th><th>Attribute</th><th>Description</th><th>Type</th><th>Default</th>
+      </tr>
+      
+        <tr>
+          <td>currentPage</td><td>currentPage</td><td></td><td>number</td><td>1</td>
+        </tr>
+      
+        <tr>
+          <td>totalPages</td><td>totalPages</td><td></td><td>number</td><td>0</td>
+        </tr>
+      
+        <tr>
+          <td>maxVisiblePages</td><td>maxVisiblePages</td><td></td><td>number</td><td>5</td>
+        </tr>
+      
+    </table>
+    
+        
+    <h3>Methods</h3>
+    <table>
+      <tr>
+        <th>Name</th><th>Parameters</th><th>Description</th><th>Return</th>
+      </tr>
+      
+        <tr>
+          <td>getPageNumbers</td><td></td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>handlePageChange</td><td>
+    
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th><th>Type</th>
+      </tr>
+      
+        <tr>
+          <td>page</td><td></td><td></td>
+        </tr>
+      
+    </table>
+  </td><td></td><td></td>
+        </tr>
+      
+    </table>
+  
+        
+    <h3>Events</h3>
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th>
+      </tr>
+      
+        <tr>
+          <td>page-change</td><td>Fired when a page is selected</td>
+        </tr>
+      
+    </table>
+      
+          
+        
+    <h3>CSS Shadow Parts</h3>
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th>
+      </tr>
+      
+        <tr>
+          <td>pagination</td><td>The pagination container</td>
+        </tr>
+      
+    </table>
+  
+        
+        
+        <h2>&lt;popup-element></h2>
+        <div>
+          
+        </div>
+        
+    <h3>Attributes</h3>
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th><th>Type</th><th>Default</th>
+      </tr>
+      
+        <tr>
+          <td>open</td><td></td><td>boolean</td><td>false</td>
+        </tr>
+      
+        <tr>
+          <td>type</td><td></td><td>string</td><td>'info'</td>
+        </tr>
+      
+        <tr>
+          <td>popupTitle</td><td></td><td>string</td><td>''</td>
+        </tr>
+      
+        <tr>
+          <td>message</td><td></td><td>string</td><td>''</td>
+        </tr>
+      
+        <tr>
+          <td>autoClose</td><td></td><td>number</td><td>0</td>
+        </tr>
+      
+        <tr>
+          <td>showCloseButton</td><td></td><td>boolean</td><td>true</td>
+        </tr>
+      
+        <tr>
+          <td>showConfirmButtons</td><td></td><td>boolean</td><td>false</td>
+        </tr>
+      
+        <tr>
+          <td>confirmText</td><td></td><td>string</td><td>'Confirm'</td>
+        </tr>
+      
+        <tr>
+          <td>cancelText</td><td></td><td>string</td><td>'Cancel'</td>
+        </tr>
+      
+    </table>
+  
+        
+    <h3>Properties</h3>
+    <table>
+      <tr>
+        <th>Name</th><th>Attribute</th><th>Description</th><th>Type</th><th>Default</th>
+      </tr>
+      
+        <tr>
+          <td>_handleLocaleChange</td><td></td><td></td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>open</td><td>open</td><td></td><td>boolean</td><td>false</td>
+        </tr>
+      
+        <tr>
+          <td>type</td><td>type</td><td></td><td>string</td><td>'info'</td>
+        </tr>
+      
+        <tr>
+          <td>popupTitle</td><td>popupTitle</td><td></td><td>string</td><td>''</td>
+        </tr>
+      
+        <tr>
+          <td>message</td><td>message</td><td></td><td>string</td><td>''</td>
+        </tr>
+      
+        <tr>
+          <td>autoClose</td><td>autoClose</td><td></td><td>number</td><td>0</td>
+        </tr>
+      
+        <tr>
+          <td>showCloseButton</td><td>showCloseButton</td><td></td><td>boolean</td><td>true</td>
+        </tr>
+      
+        <tr>
+          <td>showConfirmButtons</td><td>showConfirmButtons</td><td></td><td>boolean</td><td>false</td>
+        </tr>
+      
+        <tr>
+          <td>confirmText</td><td>confirmText</td><td></td><td>string</td><td>'Confirm'</td>
+        </tr>
+      
+        <tr>
+          <td>cancelText</td><td>cancelText</td><td></td><td>string</td><td>'Cancel'</td>
+        </tr>
+      
+        <tr>
+          <td>autoCloseTimeout</td><td></td><td></td><td></td><td>undefined</td>
+        </tr>
+      
+    </table>
+    
+        
+    <h3>Methods</h3>
+    <table>
+      <tr>
+        <th>Name</th><th>Parameters</th><th>Description</th><th>Return</th>
+      </tr>
+      
+        <tr>
+          <td>handleOpen</td><td></td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>setupAutoClose</td><td></td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>close</td><td></td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>handleCancel</td><td></td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>handleConfirm</td><td></td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>getIcon</td><td></td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>handleOverlayClick</td><td>
+    
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th><th>Type</th>
+      </tr>
+      
+        <tr>
+          <td>event</td><td></td><td></td>
+        </tr>
+      
+    </table>
+  </td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>handleContainerClick</td><td>
+    
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th><th>Type</th>
+      </tr>
+      
+        <tr>
+          <td>event</td><td></td><td></td>
+        </tr>
+      
+    </table>
+  </td><td></td><td></td>
+        </tr>
+      
+    </table>
+  
+        
+    <h3>Events</h3>
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th>
+      </tr>
+      
+        <tr>
+          <td>close</td><td></td>
+        </tr>
+      
+        <tr>
+          <td>cancel</td><td></td>
+        </tr>
+      
+        <tr>
+          <td>confirm</td><td></td>
+        </tr>
+      
+    </table>
+      
+          
+        
+        
+        
+        <h2>&lt;employee-edit-page></h2>
+        <div>
+          
+        </div>
+        
+    <h3>Attributes</h3>
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th><th>Type</th><th>Default</th>
+      </tr>
+      
+        <tr>
+          <td>employeeId</td><td></td><td>string</td><td>''</td>
+        </tr>
+      
+        <tr>
+          <td>popupConfig</td><td></td><td>object</td><td>{
+      open: false,
+      type: 'info',
+      title: '',
+      message: '',
+      autoClose: 0,
+    }</td>
+        </tr>
+      
+    </table>
+  
+        
+    <h3>Properties</h3>
+    <table>
+      <tr>
+        <th>Name</th><th>Attribute</th><th>Description</th><th>Type</th><th>Default</th>
+      </tr>
+      
+        <tr>
+          <td>_handleLocaleChange</td><td></td><td></td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>employeeId</td><td>employeeId</td><td></td><td>string</td><td>''</td>
+        </tr>
+      
+        <tr>
+          <td>popupConfig</td><td>popupConfig</td><td></td><td>object</td><td>{
+      open: false,
+      type: 'info',
+      title: '',
+      message: '',
+      autoClose: 0,
+    }</td>
+        </tr>
+      
+    </table>
+    
+        
+    <h3>Methods</h3>
+    <table>
+      <tr>
+        <th>Name</th><th>Parameters</th><th>Description</th><th>Return</th>
+      </tr>
+      
+        <tr>
+          <td>loadEmployeeData</td><td></td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>handleFormSubmit</td><td>
+    
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th><th>Type</th>
+      </tr>
+      
+        <tr>
+          <td>event</td><td></td><td></td>
+        </tr>
+      
+    </table>
+  </td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>handleFormCancel</td><td></td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>showPopup</td><td>
+    
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th><th>Type</th>
+      </tr>
+      
+        <tr>
+          <td>type</td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>title</td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>message</td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>autoClose</td><td></td><td></td>
+        </tr>
+      
+    </table>
+  </td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>handlePopupClose</td><td></td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>handleCancelConfirm</td><td></td><td></td><td></td>
+        </tr>
+      
+    </table>
+  
+            
+          
+        
+        
+        
+        <h2>&lt;employee-add-page></h2>
+        <div>
+          
+        </div>
+        
+    <h3>Attributes</h3>
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th><th>Type</th><th>Default</th>
+      </tr>
+      
+        <tr>
+          <td>popupConfig</td><td></td><td>object</td><td>{
+      open: false,
+      type: 'info',
+      title: '',
+      message: '',
+      autoClose: 0,
+    }</td>
+        </tr>
+      
+    </table>
+  
+        
+    <h3>Properties</h3>
+    <table>
+      <tr>
+        <th>Name</th><th>Attribute</th><th>Description</th><th>Type</th><th>Default</th>
+      </tr>
+      
+        <tr>
+          <td>_handleLocaleChange</td><td></td><td></td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>popupConfig</td><td>popupConfig</td><td></td><td>object</td><td>{
+      open: false,
+      type: 'info',
+      title: '',
+      message: '',
+      autoClose: 0,
+    }</td>
+        </tr>
+      
+    </table>
+    
+        
+    <h3>Methods</h3>
+    <table>
+      <tr>
+        <th>Name</th><th>Parameters</th><th>Description</th><th>Return</th>
+      </tr>
+      
+        <tr>
+          <td>handleFormSubmit</td><td>
+    
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th><th>Type</th>
+      </tr>
+      
+        <tr>
+          <td>event</td><td></td><td></td>
+        </tr>
+      
+    </table>
+  </td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>handleFormCancel</td><td></td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>showPopup</td><td>
+    
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th><th>Type</th>
+      </tr>
+      
+        <tr>
+          <td>type</td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>title</td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>message</td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>autoClose</td><td></td><td></td>
+        </tr>
+      
+    </table>
+  </td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>handlePopupClose</td><td></td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>handleCancelConfirm</td><td></td><td></td><td></td>
+        </tr>
+      
+    </table>
+  
+            
+          
+        
+        
+        
+        <h2>&lt;employees-page></h2>
+        <div>
+          
+        </div>
+        
+    <h3>Attributes</h3>
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th><th>Type</th><th>Default</th>
+      </tr>
+      
+        <tr>
+          <td>viewMode</td><td></td><td>string</td><td>'list'</td>
+        </tr>
+      
+        <tr>
+          <td>count</td><td></td><td>number</td><td>0</td>
+        </tr>
+      
+        <tr>
+          <td>searchQuery</td><td></td><td>string</td><td>''</td>
+        </tr>
+      
+    </table>
+  
+        
+    <h3>Properties</h3>
+    <table>
+      <tr>
+        <th>Name</th><th>Attribute</th><th>Description</th><th>Type</th><th>Default</th>
+      </tr>
+      
+        <tr>
+          <td>viewMode</td><td>viewMode</td><td></td><td>string</td><td>'list'</td>
+        </tr>
+      
+        <tr>
+          <td>count</td><td>count</td><td></td><td>number</td><td>0</td>
+        </tr>
+      
+        <tr>
+          <td>searchQuery</td><td>searchQuery</td><td></td><td>string</td><td>''</td>
+        </tr>
+      
+    </table>
+    
+        
+    <h3>Methods</h3>
+    <table>
+      <tr>
+        <th>Name</th><th>Parameters</th><th>Description</th><th>Return</th>
+      </tr>
+      
+        <tr>
+          <td>handleSearchInput</td><td>
+    
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th><th>Type</th>
+      </tr>
+      
+        <tr>
+          <td>event</td><td></td><td></td>
+        </tr>
+      
+    </table>
+  </td><td></td><td></td>
+        </tr>
+      
+        <tr>
+          <td>clearSearch</td><td></td><td></td><td></td>
+        </tr>
+      
+    </table>
+  
+        
+    <h3>Events</h3>
+    <table>
+      <tr>
+        <th>Name</th><th>Description</th>
+      </tr>
+      
+        <tr>
+          <td></td><td></td>
+        </tr>
+      
+    </table>
+      
+          
+        
+        
+        
+        <h2>&lt;main-page></h2>
+        <div>
+          
+        </div>
+        
+        
+    <h3>Properties</h3>
+    <table>
+      <tr>
+        <th>Name</th><th>Attribute</th><th>Description</th><th>Type</th><th>Default</th>
+      </tr>
+      
+        <tr>
+          <td>_handleLocaleChange</td><td></td><td></td><td></td><td></td>
+        </tr>
+      
+    </table>
+    
+        
+            
+          
+        
         
         
     

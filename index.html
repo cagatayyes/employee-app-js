@@ -1,11 +1,55 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Lit Starter Kit</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Employee Management System</title>
+    <script>
+      window.process = {
+        env: {
+          NODE_ENV: 'development',
+        },
+      };
+    </script>
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../node_modules/lit/polyfill-support.js"></script>
+    <script type="module" src="../src/app/employee-app.js"></script>
+    <script type="module" src="../src/components/header/header.js"></script>
+    <style>
+      html {
+        --primary-color: #ff6200;
+        --secondary-color: #172b53;
+        --tertiary-color: #ffb679;
+
+        --white: #ffffff;
+        --grey: #797878;
+        --border-grey: '#e0e0e0';
+
+        --danger: #d32f2f;
+        --danger-hover: #b71c1c;
+        --success: #16a34a;
+        --success-hover: #15803d;
+        --warning: #ff6200;
+        --warning-hover: #e55a00;
+        --info: #007bff;
+        --info-hover: #0056b3;
+
+        --background-grey: #f8f8f8;
+        --background-light-grey: #f3f4f6;
+
+        font-family: 'Roboto', 'Arial', sans-serif;
+      }
+
+      body {
+        margin: 0;
+      }
+    </style>
   </head>
   <body>
-    <a href="/dev/index.html">Component Demo</a>
+    <employee-app></employee-app>
   </body>
 </html>
