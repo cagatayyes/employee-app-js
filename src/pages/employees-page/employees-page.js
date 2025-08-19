@@ -35,6 +35,7 @@ export class EmployeesPage extends LitElement {
         <div class="employees-toolbar" part="toolbar">
           <div class="search-container">
             <input-element
+              name="search-input-container"
               class="search-input"
               type="text"
               placeholder=${msg('Search employees...')}

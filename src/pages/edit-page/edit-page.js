@@ -144,8 +144,10 @@ export class EmployeeEditPage extends LitElement {
         id: parseInt(this.employeeId),
         firstName: formData.firstName,
         lastName: formData.lastName,
-        birthDate: this.formatDateForDisplay(formData.dateOfBirth),
-        employmentDate: this.formatDateForDisplay(formData.dateOfEmployment),
+        birthDate: DateUtils.formatDateForDisplay(formData.dateOfBirth),
+        employmentDate: DateUtils.formatDateForDisplay(
+          formData.dateOfEmployment
+        ),
         phone: formData.phone,
         email: formData.email,
         department: formData.department,
